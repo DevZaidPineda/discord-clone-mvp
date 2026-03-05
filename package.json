@@ -7,9 +7,11 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "install:all": "cd server && npm install && cd ../client && npm install",
     "db:migrate": "cd server && npx prisma migrate dev",
-    "db:seed": "cd server && npx prisma db seed"
+    "db:seed": "cd server && npx prisma db seed",
+    "vercel-build": "cd client && npm install && npm run build"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "next": "^14.2.15"
   }
 }
