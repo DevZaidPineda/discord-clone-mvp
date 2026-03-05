@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { api } from "@/lib/api";
-import { useAuth } from "@/hooks/useAuth";
 import { ChannelList } from "@/components/channel/ChannelList";
 import { CreateChannelModal } from "@/components/channel/CreateChannelModal";
 import { Avatar } from "@/components/ui/Avatar";
