@@ -33,7 +33,7 @@ export function JoinServerModal({ open, onClose, onJoined }: Props) {
   };
 
   return (
-    <Modal isOpen={showJoin} onClose={onClose} title="Join a Server">
+    <Modal isOpen={isOpen} onClose={onClose} title="Join a Server">
       <p className="text-discord-text-muted text-sm mb-4">
         Enter an invite code to join an existing server.
       </p>
