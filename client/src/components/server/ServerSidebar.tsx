@@ -7,6 +7,7 @@ import { ChannelList } from "@/components/channel/ChannelList";
 import { CreateChannelModal } from "@/components/channel/CreateChannelModal";
 import { Avatar } from "@/components/ui/Avatar";
 import { Plus, LogOut, Copy, Check } from "lucide-react";
+import { useAuth } from "@/providers/AuthProvider";
 import type { Server } from "@/types";
 
 export function ServerSidebar() {
