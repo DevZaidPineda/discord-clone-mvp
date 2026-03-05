@@ -84,7 +84,7 @@ export function registerVoiceHandlers(io: Server, socket: AuthenticatedSocket) {
   });
 
   // ── WebRTC Signaling: Offer ──
-  socket.on("voice:offer", (data: { to: string; offer: RTCSessionDescriptionInit }) => {
+  socket.on("voice:offer", (data: { to: string; offer: any }) => {
     io.to(data.to).emit("voice:offer", {
       from: socket.id,
       fromUserId: userId,
@@ -94,7 +94,7 @@ export function registerVoiceHandlers(io: Server, socket: AuthenticatedSocket) {
   });
 
   // ── WebRTC Signaling: Answer ──
-  socket.on("voice:answer", (data: { to: string; answer: RTCSessionDescriptionInit }) => {
+  socket.on("voice:answer", (data: { to: string; answer: any }) => {
     io.to(data.to).emit("voice:answer", {
       from: socket.id,
       answer: data.answer,
@@ -102,7 +102,7 @@ export function registerVoiceHandlers(io: Server, socket: AuthenticatedSocket) {
   });
 
   // ── WebRTC Signaling: ICE Candidate ──
-  socket.on("voice:ice-candidate", (data: { to: string; candidate: RTCIceCandidateInit }) => {
+  socket.on("voice:ice-candidate", (data: { to: string; candidate: any }) => {
     io.to(data.to).emit("voice:ice-candidate", {
       from: socket.id,
       candidate: data.candidate,
