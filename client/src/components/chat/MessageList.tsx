@@ -9,7 +9,7 @@ interface Props {
   messages: Message[];
   loading: boolean;
   channelName: string;
-  scrollRef: React.RefObject<HTMLDivElement | null>;
+  scrollRef: React.RefObject<HTMLDivElement> | any;
 }
 
 function shouldShowCompact(current: Message, previous: Message | null): boolean {
@@ -21,7 +21,7 @@ function shouldShowCompact(current: Message, previous: Message | null): boolean 
 
 export function MessageList({ messages, loading, channelName, scrollRef }: Props) {
   return (
-    <div ref={scrollRef} className="flex-1 overflow-y-auto">
+    <div ref={scrollRef as any} className="flex-1 overflow-y-auto">
       {/* Welcome header */}
       <div className="px-4 pt-16 pb-4">
         <div className="w-16 h-16 rounded-full bg-discord-text-dark/30 flex items-center justify-center mb-3">
